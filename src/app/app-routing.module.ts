@@ -1,3 +1,4 @@
+import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { CartComponent } from './cart/cart.component';
 import { ListProductsComponent } from './list-products/list-products.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'products', component: ListProductsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'ordersummary', component: OrdersummaryComponent },
+  { path: 'payment', component: PaymentGatewayComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
 

@@ -9,6 +9,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { CartComponent } from './cart/cart.component';
 import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
+import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
     PagenotfoundComponent,
     ListProductsComponent,
     CartComponent,
-    OrdersummaryComponent
+    OrdersummaryComponent,
+    PaymentGatewayComponent
   ],
   imports: [
     BrowserModule,

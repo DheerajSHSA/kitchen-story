@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ListProductsComponent, Product } from './../list-products/list-products.component';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -10,7 +11,8 @@ export class CartComponent implements OnInit {
 
   public cart = [ new Product(0, "Burger",2), new Product(1, "Pizza", 5)]
   total: number = 0;
-  constructor( public listcomponent: ListProductsComponent) { }
+  constructor( public listcomponent: ListProductsComponent,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.cart.forEach(element => {
@@ -18,4 +20,8 @@ export class CartComponent implements OnInit {
     });
   }
 
+  orderSummary()
+  {
+    this.router.navigate(['ordersummary'])
+  }
 }
