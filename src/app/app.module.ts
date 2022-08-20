@@ -10,6 +10,7 @@ import { ListProductsComponent } from './list-products/list-products.component';
 import { CartComponent } from './cart/cart.component';
 import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.compo
     ListProductsComponent,
     CartComponent,
     OrdersummaryComponent,
-    PaymentGatewayComponent
+    PaymentGatewayComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
