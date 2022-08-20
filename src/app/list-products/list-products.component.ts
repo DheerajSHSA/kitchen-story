@@ -1,3 +1,4 @@
+import { CartComponent } from './../cart/cart.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -30,8 +31,7 @@ export class ListProductsComponent implements OnInit {
     this.products.push(new Product(s,sname,sprice))
   }
 
-  addToCart(cid: number, cname: string, cprice: number) {
-
+  addToCart(id: number, name: string, price: number) {
   }
 
   cart() {

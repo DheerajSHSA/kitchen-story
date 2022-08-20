@@ -1,11 +1,17 @@
-<!-- <table class="table table-hover">
-  <caption>MENU</caption>
+<table class="table table-hover">
+  <caption>CART</caption>
   <thead>
     <th>Name</th>
+    <th>Price</th>
  </thead>
   <tbody>
-    <tr *ngFor="let item of items  ">
-      <td>{{item}}</td>
+    <tr *ngFor="let item of cart  ">
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+    </tr>
+    <tr>
+      Total
+      <td>{{total}}</td>
     </tr>
   </tbody>
-</table> -->
+</table>
