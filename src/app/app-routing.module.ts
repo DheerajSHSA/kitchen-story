@@ -1,3 +1,4 @@
+import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { CartComponent } from './cart/cart.component';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ListProductsComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'ordersummary', component: OrdersummaryComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
 

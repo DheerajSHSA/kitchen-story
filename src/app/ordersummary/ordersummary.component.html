@@ -1,0 +1,11 @@
+<table class="table table-hover">
+  <caption style="text-align: center;">ORDER SUMMARY</caption>
+  <tbody>
+    <tr *ngFor="let item of cart  ">
+      <td>{{item.name}}</td>
+    </tr>
+    <tr>
+      <button class="btn btn-info">Click here</button> To Pay ${{total}}
+    </tr>
+  </tbody>
+</table>
