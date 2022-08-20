@@ -1,0 +1,16 @@
+<table class="table table-hover">
+  <caption>MENU</caption>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Add to Cart</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Product of products">
+      <td>{{Product.name}}</td>
+      <td>{{Product.price}}</td>
+      <td><button class="btn btn-success" (click)="add(1, 'BURGER', 200)">Add</button></td>
+    </tr>
+  </tbody>
+  <button class="btn btn-info" (click)="cart()">Cart</button><br><br>
+</table>
