@@ -9,6 +9,7 @@ import { AuthenticateService } from '../services/login/authenticate.service';
 export class LoginComponent implements OnInit {
   username = ''
   password = ''
+
   constructor(public service: AuthenticateService) { }
 
   ngOnInit(): void {
