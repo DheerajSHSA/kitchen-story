@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersummaryComponent implements OnInit {
 
-  public cart = [new Product(0, "Burger", 2), new Product(1, "Pizza", 5)]
+  public cart = [new Product("Burger", 2), new Product("Pizza", 5)]
   total: number = 0;
   constructor(public listcomponent: ListProductsComponent,
     public router: Router) { }

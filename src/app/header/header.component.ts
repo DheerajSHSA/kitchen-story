@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isAdmin: boolean = false
-  isLoggedIn: boolean = false
-  constructor() { }
+  isAdmin: boolean = ((sessionStorage.getItem('isAdmin')) === 'true')
+  isLoggedIn: boolean = ((sessionStorage.getItem('isLoggedIn')) === 'true')
+
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
+  navigateLogin() {
+    this.router.navigate(['login'])
+  }
+
+  logout() {
+    this.router.navigate(['logout'])
+  }
 }

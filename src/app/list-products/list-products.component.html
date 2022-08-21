@@ -3,14 +3,28 @@
   <thead>
     <th>Name</th>
     <th>Price</th>
-    <th>Add to Cart</th>
+    <th *ngIf="!isAdmin">Add to Cart</th>
   </thead>
   <tbody>
     <tr *ngFor="let Product of products">
       <td>{{Product.name}}</td>
       <td>{{Product.price}}</td>
-      <td><button class="btn btn-success" (click)="add(1, 'BURGER', 200)">Add</button></td>
+      <td><button class="btn btn-success" *ngIf="!isAdmin">Add</button></td>
     </tr>
   </tbody>
-  <button class="btn btn-info" (click)="cart()">Cart</button><br><br>
+  <button class="btn btn-info" (click)="cart()" *ngIf="!isAdmin">Cart</button><br><br>
+</table>
+<table class="table" *ngIf="isAdmin">
+  <caption>EDIT PRODUCT's LIST</caption>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" [(ngModel)]="pname"></td>
+      <td><input type="number" [(ngModel)]="price"></td>
+    </tr>
+    <button class="btn btn-success" (click)="add(pname, price)">Add Product</button>
+  </tbody>
 </table>

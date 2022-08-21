@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 
 export class Product {
   constructor(
-    public id: number,
     public name: string,
     public price: number
   ) { }
@@ -18,20 +17,24 @@ export class Product {
 
 export class ListProductsComponent implements OnInit {
 
+  isAdmin: boolean = ((sessionStorage.getItem('isAdmin')) === 'true')
+  isLoggedIn: boolean = ((sessionStorage.getItem('isLoggedIn')) === 'true')
+  pname = ''
+  price = 0
+
   products = [
-    new Product(1,'Burger',200)
+    new Product('Burger', 3)
   ]
 
   constructor(public router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.isAdmin)
+    console.log(this.isLoggedIn)
   }
 
-  add(s: number, sname: string, sprice: number) {
-    this.products.push(new Product(s,sname,sprice))
-  }
-
-  addToCart(id: number, name: string, price: number) {
+  add(pname: string = this.pname, price: number = this.price) {
+    this.products.push(new Product(pname, price))
   }
 
   cart() {
