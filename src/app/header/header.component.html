@@ -5,7 +5,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="#">Home</a></li>
-      <li><a>Change your Password</a></li>
+      <li (click)="changePassword()" *ngIf="isAdmin && isLoggedIn"><a href="/changepassword">Change your Password</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li (click)="navigateLogin()" *ngIf="!isLoggedIn"><a href="/login"><span class="glyphicon glyphicon-user"></span> Login</a></li>

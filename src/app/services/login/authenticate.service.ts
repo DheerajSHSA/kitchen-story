@@ -8,9 +8,12 @@ import { Injectable } from '@angular/core';
 })
 export class AuthenticateService {
 
+  map = new Map<string, string>([
+    ['admin', 'admin']
+  ]);
+
   constructor(
-    public router: Router,
-    public products: ListProductsComponent
+    public router: Router
   ) { }
 
 
@@ -27,6 +30,19 @@ export class AuthenticateService {
     }
     else {
       alert("Incorrect Username or Password")
+    }
+  }
+
+  changePassword(oldPassword: string, newPassword: string)
+  {
+    if(oldPassword === this.map.get('admin'))
+    {
+      this.map.set('admin', newPassword)
+      alert('Password Changed')
+    }
+    else
+    {
+      alert('Current Password is not correct')
     }
   }
 }

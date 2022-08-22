@@ -19,6 +19,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
+  changePassword()
+  {
+    this.router.navigate(['changepassword'])
+  }
+
   logout() {
     if(confirm('Logged out Successfully'))
     {

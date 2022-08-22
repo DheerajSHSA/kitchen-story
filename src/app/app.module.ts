@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { HeaderComponent } from './header/header.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
     CartComponent,
     OrdersummaryComponent,
     PaymentGatewayComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

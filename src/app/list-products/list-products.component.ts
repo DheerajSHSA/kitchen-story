@@ -21,9 +21,13 @@ export class ListProductsComponent implements OnInit {
   isLoggedIn: boolean = ((sessionStorage.getItem('isLoggedIn')) === 'true')
   pname = ''
   price = 0
-  searchText:any;
+  searchText: any;
 
   products = [
+    new Product('Burger', 3)
+  ]
+
+  cartList = [
     new Product('Burger', 3)
   ]
 
@@ -36,6 +40,11 @@ export class ListProductsComponent implements OnInit {
 
   add(pname: string = this.pname, price: number = this.price) {
     this.products.push(new Product(pname, price))
+  }
+
+  addToCart(pname: string, price: number) {
+    this.cartList.push(new Product(pname, price))
+    alert(`Added to the Cart ${pname}`)
   }
 
   cart() {
