@@ -21,6 +21,7 @@ export class ListProductsComponent implements OnInit {
   isLoggedIn: boolean = ((sessionStorage.getItem('isLoggedIn')) === 'true')
   pname = ''
   price = 0
+  searchText:any;
 
   products = [
     new Product('Burger', 3)

@@ -20,6 +20,11 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.router.navigate(['logout'])
+    if(confirm('Logged out Successfully'))
+    {
+    sessionStorage.removeItem('isAdmin')
+    sessionStorage.removeItem('isLoggedIn')
+    this.router.navigate(['login'])
+    }
   }
 }
