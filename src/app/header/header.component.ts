@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    if(confirm('Logged out Successfully'))
+    if(confirm('Are you trying to Log out?'))
     {
     sessionStorage.removeItem('isAdmin')
     sessionStorage.removeItem('isLoggedIn')
